@@ -42,6 +42,7 @@ tar -xvzf geth-linux-amd64-1.10.23-d901d853.tar.gz
 
 cd geth-linux-amd64-1.10.23-d901d853/
 
+echo -e "${GREEN}Now you will need to come up with and remember the password.\nWe will also be given our public key and the path to the folder where the private key will be stored.\nGo to this directory and save the backup${NC}"
+
 ./geth account new --keystore ./keystore
 
-echo -e "${GREEN}Now you will need to come up with and remember the password.\nWe will also be given our public key and the path to the folder where the private key will be stored.\nGo to this directory and save the backup${NC}"
