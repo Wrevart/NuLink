@@ -55,18 +55,18 @@ cp /root/geth-linux-amd64-1.10.23-d901d853/keystore/* /root/nulink
 chmod -R 777 /root/nulink
 
 echo -e "Come up with a password for the vault"
-read $PASSWORD_SAFE
+read PASSWORD_SAFE
 export NULINK_KEYSTORE_PASSWORD="$PASSWORD_SAFE"
 
 echo -e "Enter the worker password"
-read $PASSWORD_WORKER
+read PASSWORD_WORKER
 export NULINK_OPERATOR_ETH_PASSWORD="$PASSWORD_WORKER"
 
 echo -e "${RED}THE NAME OF YOUR UTC FILE IS PRIVATE${NC}"
-read $NAME_FILE_PRIVATE
+read NAME_FILE_PRIVATE
 
 echo -e "${RED}YOUR WORKER'S ADDRESS${NC}"
-read $WORKER_ADDRESS
+read WORKER_ADDRESS
 
 docker run -it --rm \
 -p 9151:9151 \
