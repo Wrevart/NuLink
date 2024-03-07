@@ -82,17 +82,17 @@ nulink/nulink nulink ursula init \
 --operator-address "$WORKER_ADDRESS" \
 --max-gas-price 10000000000
 
-while true; do
- echo -e "${RED}Send 0.1 tBNB to the worker's address${NC}"
- echo -e "${RED}When you finish the operation, press Y${NC}"
- read otvet
- if [ "$otvet" = "Y" ]; then
-   echo "I'm launching a node!"
-   break 
- else 
-  echo "When you finish the operation, press Y"
- fi 
-done
+\\while true; do
+\\ echo -e "${RED}Send 0.1 tBNB to the worker's address${NC}"
+\\ echo -e "${RED}When you finish the operation, press Y${NC}"
+\\ read otvet
+\\ if [ "$otvet" = "Y" ]; then
+\\   echo "I'm launching a node!"
+\\   break 
+\\ else 
+\\  echo "When you finish the operation, press Y"
+\\ fi 
+\\done
 
 
 docker run --restart on-failure -d \
